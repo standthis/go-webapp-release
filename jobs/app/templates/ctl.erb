@@ -10,7 +10,7 @@ case $1 in
     mkdir -p $RUN_DIR $LOG_DIR
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
 
-    /var/vcap/packages/go-app/go-app \
+    /var/vcap/packages/go-webapp/go-webapp \
       >>  $LOG_DIR/app.stdout.log \
       2>> $LOG_DIR/app.stderr.log & echo $! > $PIDFILE
 
