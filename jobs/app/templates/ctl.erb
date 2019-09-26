@@ -2,6 +2,7 @@
 
 RUN_DIR=/var/vcap/sys/run/app
 LOG_DIR=/var/vcap/sys/log/app
+BIN_DIR=/var/vcap/sys/bin
 PIDFILE=${RUN_DIR}/app.pid
 
 case $1 in
@@ -10,7 +11,7 @@ case $1 in
     mkdir -p $RUN_DIR $LOG_DIR
     chown -R vcap:vcap $RUN_DIR $LOG_DIR
 
-    /var/vcap/packages/go-webapp/go-webapp \
+    /var/vcap/packages/go-webapp/bin/app \
       >>  $LOG_DIR/app.stdout.log \
       2>> $LOG_DIR/app.stderr.log & echo $! > $PIDFILE
 

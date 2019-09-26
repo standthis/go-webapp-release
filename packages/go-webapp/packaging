@@ -1,1 +1,10 @@
-set -e
+set -e -x
+
+source /var/vcap/packages/golang-1.12-linux/bosh/compile.env
+
+cp -a go-webapp/* ${BOSH_INSTALL_TARGET}
+#mkdir ../src && cp -a * ../src/ && mv ../src ./src
+mkdir $BOSH_INSTALL_TARGET/bin
+
+go build -o $BOSH_INSTALL_TARGET/bin/app $BOSH_INSTALL_TARGET/main.go
+

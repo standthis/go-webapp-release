@@ -1,6 +1,8 @@
 ---
 name: go-webapp
 
-dependencies: []
+dependencies: 
+- golang-1.12-linux
 
-files: []
+files: 
+- go-webapp/main.go
