@@ -8,4 +8,8 @@ packages:
 - golang-1.12-linux
 - go-webapp
 
+provides:
+- name: ingress
+  type: http
+
 properties: {}
