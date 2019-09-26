@@ -3,4 +3,4 @@ blobstore:
   provider: local
   options: 
     blobstore_path: /tmp/go-webapp-blobs
-final-name: go-webapp
+final_name: go-webapp

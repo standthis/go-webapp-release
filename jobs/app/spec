@@ -6,6 +6,6 @@ templates:
 
 packages: 
 - golang-1.12-linux
-#- go-webapp
+- go-webapp
 
 properties: {}
